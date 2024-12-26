@@ -1,0 +1,56 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()">
+
+    <div class="form-div">
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name">
+        <div *ngIf="myForm.get('name')?.invalid && (myForm.get('name')?.dirty || myForm.get('name')?.touched)"
+            class="error-message">
+            <div *ngIf="myForm.get('name')?.errors?.['required']">El nombre es requerido.</div>
+            <div *ngIf="myForm.get('name')?.errors?.['minlength']">El nombre debe tener al menos 3 caracteres.</div>
+        </div>
+    </div>
+
+    <div class="form-div">
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email">
+        <div *ngIf="myForm.get('email')?.invalid && (myForm.get('email')?.dirty || myForm.get('email')?.touched)"
+            class="error-message">
+            <div *ngIf="myForm.get('email')?.errors?.['required']">El email es requerido.</div>
+            <div *ngIf="myForm.get('email')?.errors?.['email']">El email debe ser válido.</div>
+        </div>
+    </div>
+
+    <div class="form-div">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" formControlName="phone" pattern="[0-9]*" minlength="10" maxlength="11">
+        <div *ngIf="myForm.get('phone')?.invalid && (myForm.get('phone')?.dirty || myForm.get('phone')?.touched)"
+            class="error-message">
+            <div *ngIf="myForm.get('phone')?.errors?.['required']">El teléfono es requerido.</div>
+            <div *ngIf="myForm.get('phone')?.errors?.['minlength']">El teléfono debe tener al menos 10 dígitos.</div>
+            <div *ngIf="myForm.get('phone')?.errors?.['maxlength']">El teléfono debe tener máximo 11 dígitos.</div>
+            <div *ngIf="myForm.get('phone')?.errors?.['pattern']">El teléfono debe contener solo números.</div>
+        </div>
+    </div>
+
+    <div class="form-div">
+        <label for="adress">Adress:</label>
+        <input type="text" id="adress" formControlName="adress">
+        <div *ngIf="myForm.get('adress')?.invalid && (myForm.get('adress')?.dirty || myForm.get('adress')?.touched)"
+            class="error-message">
+            <div *ngIf="myForm.get('adress')?.errors?.['required']">La dirección es requerida.</div>
+        </div>
+    </div>
+
+    <div class="form-button">
+        <button type="submit" [disabled]="myForm.invalid || isLoading" class="submit-button">
+            {{ isLoading ? 'Enviando...' : 'Enviar' }}
+        </button>
+    </div>
+</form>
+
+<div *ngIf="showModal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>Formulario Enviado</h2>
+        <button (click)="closeModal()" class="close-button">Cerrar</button>
+    </div>
+</div>

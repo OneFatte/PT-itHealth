@@ -1,0 +1,33 @@
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 1.2em 1em;
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;
+}
+
+input{
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #777;
+    color: #fff;
+}
+input:focus{
+    outline: none;
+}
+
+button{
+    padding: 0.6em 1em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #fa3333;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #fa7575;
+}
