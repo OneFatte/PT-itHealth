@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ApiServiceService } from '../services/api-service.service';
 
@@ -9,7 +9,6 @@ import { ApiServiceService } from '../services/api-service.service';
   styleUrl: './search-user.component.css'
 })
 export class SearchUserComponent {
-
   userId: number = 0;
 
   constructor(private _http: ApiServiceService) { }

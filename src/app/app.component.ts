@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ApiServiceService } from './services/api-service.service';
-import { SearchUserComponent } from "./search-user/search-user.component";
 import { FormUserComponent } from "./form-user/form-user.component";
+import { SearchUserComponent } from "./search-user/search-user.component";
 
 @Component({
   selector: 'app-root',
@@ -31,5 +31,4 @@ export class AppComponent {
       }
     });
   }
-
 }
