@@ -1,58 +1,30 @@
 # PTitHealth
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Este proyecto esta usando [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
 ## Development server
 
-To start a local development server, run:
+Para empezar ejecuta cualquiera de los siguientes comandos:
 
 ```bash
 ng serve
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Cuando el servidor este corriendo, abre tu navegador y ve a la direccion `http://localhost:4200/`. La aplicacion autamaticamente aparecera en la pantalla.
 
-## Code scaffolding
+## Parte 1 consulir API
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Entrar en inspeccionar y se vera el primer punto donde se obtienen los primeros 5 usuarios del api `https://jsonplaceholder.typicode.com/users.` 
 
-```bash
-ng generate component component-name
-```
+Visualmente aparece un buscador donde se le ingresa un ID del 1-10 y tarera en consola el usuario.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
+## Parte 2 Crear un Formulario Estilizado
 
-## Building
+Aparece un formulario con estilos personalizados, todos los inputs son requeridos y cada input tiene un requerimiento addicional dependiendo de su naturaleza. 
+Para enviar se debe cumplir con las validaciones, se envia a la API y si es exitosa el envio muestra un modal.
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
 ## Additional Resources
 
